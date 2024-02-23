@@ -9,7 +9,8 @@
     "lint": "eslint --quiet .*.js src/ test/",
     "lint:fix": "eslint --fix .*.js src/ test/",
     "test": "rollup -c && mocha --recursive test/",
-    "start": "static-server dist"
+    "start": "static-server dist",
+    "deploy": "npm run build && gh-pages -d dist/"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0",
@@ -35,6 +36,7 @@
     "eslint-config-airbnb-base": "^15.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-svelte3": "^4.0",
+    "gh-pages": "^6.1.1",
     "leaflet": "1.8.0",
     "leaflet-minimap": "^3.6.1",
     "timeago.js": "^4.0.2"
